@@ -1,0 +1,33 @@
+name: CI / Microservice B
+on:
+  pull_request:
+    paths:
+      - "microservices/b/**"
+  push:
+    paths:
+      - "microservices/b/**"
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Microservice B > Build"
+
+  test:
+    name: Test 
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Microservice B > Test"
+
+  scan:
+    name: Scan
+    needs:
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Microservice B > Scan"

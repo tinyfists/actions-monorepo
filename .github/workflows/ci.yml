@@ -1,0 +1,39 @@
+name: CI / Default
+on:
+  pull_request:
+    paths-ignore:
+      - "microservices/a/**"
+      - "microservices/b/**"
+      - "microservices/c/**"
+      - "microservices/d/**"
+  push:
+    paths-ignore:
+      - "microservices/a/**"
+      - "microservices/b/**"
+      - "microservices/c/**"
+      - "microservices/d/**"
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Default > Build"
+
+  test:
+    name: Test 
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Default > Test"
+
+  scan:
+    name: Scan
+    needs:
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Default > Scan"

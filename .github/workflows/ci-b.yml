@@ -22,6 +22,7 @@ jobs:
     steps:
       - run: |
           echo "Microservice B > Test"
+          exit 1
 
   scan:
     name: Scan

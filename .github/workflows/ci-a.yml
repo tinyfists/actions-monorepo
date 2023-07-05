@@ -13,6 +13,7 @@ jobs:
     steps:
       - run: |
           echo "Microservice A > Build"
+          exit 1
 
   test:
     name: Test 

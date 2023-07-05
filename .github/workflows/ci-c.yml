@@ -31,3 +31,4 @@ jobs:
     steps:
       - run: |
           echo "Microservice C > Scan"
+          exit 1

@@ -1,12 +1,16 @@
 name: CI / Default
 on:
   pull_request:
+    branches:
+      - main
     paths-ignore:
       - "microservices/a/**"
       - "microservices/b/**"
       - "microservices/c/**"
       - "microservices/d/**"
   push:
+    branches:
+      - main
     paths-ignore:
       - "microservices/a/**"
       - "microservices/b/**"

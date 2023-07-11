@@ -1,17 +1,14 @@
-# This is a comment.
 # Each line is a file pattern followed by one or more owners.
 
-# These owners will be the default owners for everything in
-# the repo. Unless a later match takes precedence,
-# @actions-monorepo will be requested for review when someone opens
-# a pull request.
+# These owners will be the default owners for everything in the repo.
+# Unless a later match takes precedence, @actions-monorepo will be requested for review when someone opens a pull request.
 
-* @actions-monorepo
+* @tinyfists/actions-monorepo
 
 
-# Teams can be specified as code owners as well. Teams should
-# be identified in the format @org/team-name. Teams must have
-# explicit write access to the repository.
+# Teams can be specified as code owners as well.
+# Teams should be identified in the format @org/team-name.
+# Teams must have explicit write access to the repository.
 
 /microservices/a/ @tinyfists/actions-monorepo-microservice-a
 /microservices/b/ @tinyfists/actions-monorepo-microservice-b

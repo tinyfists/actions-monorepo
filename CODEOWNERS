@@ -6,7 +6,7 @@
 # @actions-monorepo will be requested for review when someone opens
 # a pull request.
 
-* @actions-monorepo
+* @tinyfists/actions-monorepo
 
 
 # Teams can be specified as code owners as well. Teams should

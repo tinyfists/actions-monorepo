@@ -1,9 +1,13 @@
 name: CI / Microservice A
 on:
   pull_request:
+    branches:
+      - main
     paths:
       - "microservices/a/**"
   push:
+    branches:
+      - main
     paths:
       - "microservices/a/**"
 jobs:

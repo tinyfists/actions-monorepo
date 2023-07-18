@@ -21,7 +21,8 @@ The design and administration of monorepos should accommodate new microservices,
 1. Create or update [ruleset](https://docs.github.com/en/enterprise-cloud@latest/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets) or [branch protection rule](https://docs.github.com/en/enterprise-cloud@latest/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule) with **Require status checks to pass before merging** containing the workflow job IDs:
 
    > **Note**
-   > Required status checks are case insensitive.
+   > 1. Required status checks are case insensitive.
+   > 1. Required status checks on branch protection rules must exist before being setup.
 
    ![Screenshot of required status checks from GitHub Actions to satisfy branch protection rule](docs/design-required-status-checks.png)
 
@@ -73,7 +74,7 @@ The design and administration of monorepos should accommodate new microservices,
 
 1. Create workflow for changes to everything else
 
-   The following example ignores specific microservices and standardizes on the `build`, `test`, and `scan` job IDs:
+   The following example ignores specific microservices using the same `build`, `test`, and `scan` job IDs as the other workflows to avoid [skipped required status checks](https://docs.github.com/en/enterprise-cloud@latest/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/troubleshooting-required-status-checks#handling-skipped-but-required-checks):
 
    ```yaml
    name: CI / Default

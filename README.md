@@ -10,13 +10,13 @@ This repository highlights specific challenges and approaches to how to address 
 
 ## Challenges
 
-1. [**Simplifying required status checks by standardizing workflow jobs across microservices workflows**](required_status_checks/)
+1. [**Simplifying required status checks by standardizing workflow jobs across microservices workflows**](docs/required_status_checks/)
 
-   ![Screenshot of required status checks fulfilled for all microservices within GitHub pull request](required_status_checks/required_status_checks_pr.png)
+   ![Screenshot of required status checks fulfilled for all microservices within GitHub pull request](docs/required_status_checks/required_status_checks_pr.png)
 
-1. [**Managing repository access, pull request assignment, and code ownership using nested GitHub teams**](governance/)
+1. [**Managing repository access, pull request assignment, and code ownership using nested GitHub teams**](docs/governance/)
 
-   ![Screenshot of pull request limited to microservice-specific changes and reviewers](governance/nested_teams_pr.png)
+   ![Screenshot of pull request limited to microservice-specific changes and reviewers](docs/governance/nested_teams_pr.png)
 
 ## Resources
 
